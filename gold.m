@@ -3,10 +3,10 @@ format long
 f = @(x)9 * exp(-x) * sin(2 * pi * x) - 3.5;
 g = @(x) - 9 * exp(-x) * sin(2 * pi * x) + 3.5;
 
-[x, fx] = gold_min(f, 0, 2);
-[x, fx] = gold_min(g, 0, 2);
-[x, fx] = brute_force(f, 0, 2);
-[x, fx] = brute_force(g, 0, 2);
+[x, fx] = gold_min(f, 0, 2)
+[x, fx] = gold_min(g, 0, 2)
+[x, fx] = brute_force(f, 0, 2)
+[x, fx] = brute_force(g, 0, 2)
 
 function [x, fx] = gold_min(f, xl, xu, es, maxit)
     if nargin < 3, error('at least 3 input arguments required'), end
